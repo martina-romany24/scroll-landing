@@ -1,0 +1,127 @@
+/* =============================================
+   GLOBAL STYLES — FORMA Creative Agency
+   ============================================= */
+
+:root {
+  --cream:      #F5F3EE;
+  --cream-dark: #EAE7DF;
+  --charcoal:   #1A1916;
+  --mid:        #6B6560;
+  --gold:       #C9A96E;
+  --gold-light: #E8D5B0;
+  --white:      #FFFFFF;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-ui:      'Syne', sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-ui);
+  font-weight: 400;
+  line-height: 1.6;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s, width 0.3s var(--ease-out), height 0.3s var(--ease-out), background 0.3s;
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--charcoal);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s var(--ease-out), width 0.4s var(--ease-out), height 0.4s var(--ease-out), border-color 0.3s, opacity 0.3s;
+}
+
+.cursor.hover {
+  width: 6px; height: 6px;
+  background: var(--gold);
+}
+
+.cursor-follower.hover {
+  width: 56px; height: 56px;
+  border-color: var(--gold);
+  opacity: 0.5;
+}
+
+/* Selection */
+::selection {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+/* Section shared */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Utility */
+.section-label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.gold-line {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+/* =============================================
+   RESPONSIVE BASE
+   ============================================= */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  .cursor, .cursor-follower { display: none; }
+}

@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#F5F3EE"/>
+  
+  <!-- Creative "F" letter design -->
+  <path d="M8 8 L8 24 L12 24 L12 18 L18 18 L18 14 L12 14 L12 12 L20 12 L20 8 Z" fill="#1a1a1a"/>
+  
+  <!-- Creative accent dot -->
+  <circle cx="24" cy="8" r="2" fill="#FF6B6B"/>
+</svg>

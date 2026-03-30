@@ -1,0 +1,142 @@
+.about {
+  padding: clamp(80px, 12vw, 160px) clamp(28px, 8vw, 130px);
+  background: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: center;
+}
+
+/* Image column */
+.imageCol {
+  position: relative;
+  will-change: transform;
+}
+
+.imageFrame {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 130px;
+}
+
+.badgeYear {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.badgeText {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 243, 238, 0.55);
+}
+
+/* Text column */
+.textCol {
+  will-change: transform;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--charcoal);
+  margin-bottom: 28px;
+}
+
+.heading em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.body {
+  font-family: var(--font-ui);
+  font-size: clamp(0.88rem, 1.1vw, 1rem);
+  font-weight: 400;
+  color: var(--mid);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  max-width: 460px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--cream-dark);
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+}
+
+/* ── Responsive ─────────────────────────── */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .imageCol {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .badge {
+    bottom: -16px;
+    right: -8px;
+  }
+}
